@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ビジネス立ち上げの術｜創業計画書メーカー</title>
+  <meta name="description" content="副業・起業の第一歩は、見える化から！書いて整理して、創業計画書を無料で簡単に作成できるWebアプリです。">
+  <meta name="keywords" content="創業計画書, 副業, 起業, ビジネスプラン, 自動作成, 副業準備, 忍者式, 副業支援">
+  <meta name="author" content="kkp_webninja">
+  <meta property="og:title" content="ビジネス立ち上げの術｜創業計画書メーカー">
+  <meta property="og:description" content="副業・起業の第一歩は、見える化から！創業計画書を自動作成できる無料ツールであなたのビジネスを明確に！">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kkpwebninja.com">
+  <meta property="og:image" content="https://kkpwebninja.com/ogp.jpg">
+  <link rel="canonical" href="https://kkpwebninja.com">  <!-- Google Analytics -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LM85GJN0L"></script>  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2LM85GJN0L');
+  </script>  <style>
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f4f7fc;
+      color: #333;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    p.intro {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 1.5rem;
+      display: block;
+    }
+    textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #resultArea {
+      display: none;
+      margin-top: 2.5rem;
+    }
+    pre {
+      white-space: pre-wrap;
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 5px solid #007BFF;
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style></head>
+<body>
+  <div class="container">
+    <h1>ビジネス立ち上げの術</h1>
+    <p class="intro">副業・起業の第一歩は「書いて見える化」から！<br>あなたの想いを整理し、計画をカタチにしよう💡</p><form id="planForm">
+  <label>① 創業の動機（なぜ始めようと思ったのか）</label>
+  <textarea name="motivation" rows="3" required placeholder="例：お金の不安を減らすため、ブログで月5万円の安定収入を目指したいと考えた。自分の経験を発信することで、人の役に立てると感じた。"></textarea>
+
+  <label>② 経営者の経歴（過去の経験・活かせるスキル）</label>
+  <textarea name="history" rows="3" required placeholder="例：会社員歴15年。副業で動画編集・ブログ運営を経験。WordPressやSEOにも強みあり。"></textarea>
+
+  <label>③ 取扱い商品・サービス（提供内容と強み）</label>
+  <textarea name="product" rows="3" required placeholder="例：ブログによる広告収入、アフィリエイト、動画編集代行や情報発信に関するコンテンツ提供"></textarea>
+
+  <label>④ 取引先（販売先や仕入先、想定顧客）</label>
+  <textarea name="clients" rows="3" required placeholder="例：Googleアドセンス、Amazonアソシエイト、楽天アフィリエイト、YouTube視聴者や自社サイトの訪問者など"></textarea>
+
+  <label>⑤ 必要資金と調達方法（初期費用の内訳と集め方）</label>
+  <textarea name="funds" rows="3" required placeholder="例：PC買い替え10万円、教材費2万円 → 自己資金より捻出。収益化後は広告費などへ再投資予定"></textarea>
+
+  <label>⑥ 事業の見通し（収支計画・いつ黒字になるか）</label>
+  <textarea name="forecast" rows="3" required placeholder="例：3ヶ月目に売上3万円、半年後に月10万円の安定収入を目指す。1年以内に法人化も視野に入れる"></textarea>
+
+  <button type="submit">📄 創業計画書を作成する</button>
+</form>
+
+<div id="resultArea">
+  <h2>🎉 あなたの創業計画書</h2>
+  <pre id="planOutput"></pre>
+  <button onclick="copyPlan()">📋 コピーする</button>
+</div>
+
+<footer>
+  <p>🕸️ <a href="https://kkpwebninja.com" target="_blank">本丸ページはこちら</a><br>
+  🐦 <a href="https://x.com/kkp_webninja" target="_blank">X（旧Twitter）：@kkp_webninja</a><br>
+  各巻物（アプリ）の入り口は本丸ページに集めているでござる。</p>
+</footer>
+
+  </div>  <script>
+    document.getElementById("planForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const plan = `【創業計画書】\n==============================\n① 創業の動機：\n${form.motivation.value}\n\n② 経営者の経歴：\n${form.history.value}\n\n③ 取扱い商品・サービス：\n${form.product.value}\n\n④ 取引先：\n${form.clients.value}\n\n⑤ 必要資金と調達方法：\n${form.funds.value}\n\n⑥ 事業の見通し：\n${form.forecast.value}\n==============================\n※内容を保存または印刷してご活用ください。`;
+      document.getElementById("planOutput").textContent = plan;
+      document.getElementById("resultArea").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+
+    function copyPlan() {
+      const text = document.getElementById("planOutput").textContent;
+      navigator.clipboard.writeText(text).then(() => alert("コピーしました！"));
+    }
+  </script></body>
+</html>
